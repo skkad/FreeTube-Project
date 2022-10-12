@@ -10,7 +10,7 @@ export default function SideBar({ selectedCategory, setSelectedCategory }){
             {categories.map((category)=>{
               return (<button className="category-btn" 
                         onClick={() => setSelectedCategory(category.name)}
-                        style={{background: category.name===selectedCategory && '#FC1503',color:'white'}}
+                        style={{background: category.name===selectedCategory ? '#FC1503' :'black',color:'white',borderRadius:'50px'}}
                         key={category.name}
                 >
                     <span style={{ color: category.name === selectedCategory ? "white" : "red", marginRight: "15px" }}>{category.icon}</span>
